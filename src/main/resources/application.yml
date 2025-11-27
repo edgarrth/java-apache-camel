@@ -1,0 +1,22 @@
+server:
+  port: 9090
+camel:
+  component:
+    platform-http:
+      port: 9090
+  kafka:
+    brokers: localhost:9092
+  topic: mi-topico
+  route:
+    output: kafka:{{camel.topic}}?brokers={{camel.kafka.brokers}}
+  pubsub:
+    project-id: mi-proyecto
+    topic-id: mi-topico
+    # Ejemplo alternativo para usar Pub/Sub en lugar de Kafka:
+    # output: google-pubsub:{{camel.pubsub.project-id}}:{{camel.pubsub.topic-id}}
+  logging:
+    enabled: true
+    level: INFO
+  error:
+    max-redeliveries: 3
+    redelivery-delay: 2000
