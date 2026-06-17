@@ -12,7 +12,7 @@ Actualmente la aplicación:
 4. Publica dinámicamente el mensaje hacia un broker configurado mediante propiedades.
 5. Incluye configuración común para logging, trazabilidad y manejo de errores.
 
-La implementación actual utiliza **Kafka** como destino por defecto, aunque puede cambiarse a **Google Pub/Sub** sin modificar código.
+La implementación actual utiliza **Kafka** como destino por defecto, aunque puede cambiarse a cualquier broker sin modificar código.
 
 ---
 
